@@ -1,0 +1,193 @@
+body{
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    place-items: center;
+    background-image: url(image/fondo2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2{
+    font-size: 50px;
+    color: transparent;
+    position: static;
+}
+
+h1{
+  font-size: 20px;
+  color: white;
+  position: static;
+}
+
+#ingenieria-recomendada{
+  font-weight: bold;
+}
+
+.text-box h2 {
+    font-size: 50px;
+    margin: 20px 0; /* Ajusta el margen para separar el texto del borde superior */
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    background: url(image/back.png);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: 50% 0; /* Centra el fondo verticalmente */
+    animation: back 25s linear infinite;
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: burlywood;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Estilos para las etiquetas (labels) que no contienen un input */
+.contenedor label:not(:has(input)) {
+    font-weight: bold;
+    color: aliceblue;
+}
+
+button {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-55%);
+}
+  
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}  
+  
+  /* 3 */
+  .btn-3 {
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 span:hover{
+     color: rgba(2,126,251,1);
+  }
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: rgba(2,126,251,1);
+    transition: all 0.3s ease;
+  }
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 550px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    padding-left: 50px; /* Añade espacio entre los bordes y el contenido */
+}
+
+/* Estilos para las etiquetas (labels) */
+.contenedor label {
+    margin-top: 5px; /* Añade espacio entre la etiqueta y el borde superior del contenedor */
+}
+
+
+
+
+
+
+

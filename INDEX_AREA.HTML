@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_Area.css">
+    <title>Orientación Académica</title>
+</head>
+
+<body>
+
+    <div class="text-box">
+        <h2>Orientación Academica</h2>
+    </div>
+    <p>Responde las siguientes preguntas para obtener una recomendación.</p>
+
+    <form id="academic-form">
+        <div class="contenedor">
+            <label>1. ¿Qué tipo de actividades disfrutas más?</label>
+            <label><input type="radio" name="q1" value="a"> Resolver problemas matemáticos y científicos.</label>
+            <label><input type="radio" name="q1" value="b"> Analizar y comprender las relaciones entre las personas y la
+                sociedad.</label>
+            <label><input type="radio" name="q1" value="c"> Expresarte de forma creativa a través de palabras, imágenes
+                o sonidos.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>2. Cuando enfrentas un desafío, ¿cuál es tu enfoque principal?</label>
+            <label><input type="radio" name="q2" value="a"> Buscar soluciones lógicas y basadas en hechos.</label>
+            <label><input type="radio" name="q2" value="b"> Considerar las diferentes perspectivas y opiniones.</label>
+            <label><input type="radio" name="q2" value="c"> Explorar nuevas ideas y expresarte de manera
+                original.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>3. ¿Qué tipo de actividades te resulta más gratificante?</label>
+            <label><input type="radio" name="q3" value="a"> Lograr resultados medibles y concretos.</label>
+            <label><input type="radio" name="q3" value="b"> Contribuir al bienestar y comprensión de las
+                personas.</label>
+            <label><input type="radio" name="q3" value="c"> Crear obras artísticas o conceptuales.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>4. ¿Qué te motiva a aprender?</label>
+            <label><input type="radio" name="q4" value="a"> Desafíos intelectuales y resolución de problemas.</label>
+            <label><input type="radio" name="q4" value="b"> Comprender la sociedad y las relaciones humanas.</label>
+            <label><input type="radio" name="q4" value="c"> Expresarte y comunicar ideas de manera creativa.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>5. ¿Cuál de las siguientes palabras describe mejor tu enfoque de aprendizaje?</label>
+            <label><input type="radio" name="q5" value="a"> Analítico.</label>
+            <label><input type="radio" name="q5" value="b"> Empático.</label>
+            <label><input type="radio" name="q5" value="c"> Creativo.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>6. ¿Qué temas te resultan más interesantes?</label>
+            <label><input type="radio" name="q6" value="a"> Matemáticas, ciencias y tecnología.</label>
+            <label><input type="radio" name="q6" value="b"> Psicología, sociología y ciencias sociales.</label>
+            <label><input type="radio" name="q6" value="c"> Literatura, historia, arte y música.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>7. ¿Qué tipo de libros o películas prefieres?</label>
+            <label><input type="radio" name="q7" value="a"> Ciencia ficción, documentales científicos.</label>
+            <label><input type="radio" name="q7" value="b"> Novelas, dramas, películas que exploran la sociedad.</label>
+            <label><input type="radio" name="q7" value="c"> Obras literarias, películas artísticas.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>8. ¿Qué tipo de proyectos te gustaría liderar o participar?</label>
+            <label><input type="radio" name="q8" value="a"> Proyectos técnicos o científicos.</label>
+            <label><input type="radio" name="q8" value="b"> Proyectos sociales o de servicio comunitario.</label>
+            <label><input type="radio" name="q8" value="c"> Proyectos creativos o artísticos.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>9. ¿Cómo prefieres pasar tu tiempo libre?</label>
+            <label><input type="radio" name="q9" value="a"> Resolviendo acertijos, jugando juegos estratégicos.</label>
+            <label><input type="radio" name="q9" value="b"> Socializando, participando en debates o eventos
+                sociales.</label>
+            <label><input type="radio" name="q9" value="c"> Creando, ya sea escribiendo, pintando, tocando música,
+                etc.</label>
+        </div>
+
+        <br>
+        <div class="contenedor">
+            <label>10. ¿Qué tipo de carrera te imaginas teniendo en el futuro?</label>
+            <label><input type="radio" name="q10" value="a"> Ingeniero, científico, programador.</label>
+            <label><input type="radio" name="q10" value="b"> Psicólogo, sociólogo, maestro.</label>
+            <label><input type="radio" name="q10" value="c"> Escritor, artista, músico.</label>
+        </div>
+
+
+        <button class="custom-btn btn-3" type="button" onclick="calcularResultado()">Obtener Resultado</button>
+
+    </form>
+
+    <br>
+    <a href="index.html" style="color: white;">
+        <button class="custom-btn btn-3">
+            <span>Inicio</span>
+        </button>
+    </a>
+
+
+
+    <script>
+        function calcularResultado() {
+            // Recopilar respuestas
+            const respuestas = {
+                q1: document.querySelector('input[name="q1"]:checked').value,
+                q2: document.querySelector('input[name="q2"]:checked').value,
+                q3: document.querySelector('input[name="q3"]:checked').value,
+                q4: document.querySelector('input[name="q4"]:checked').value,
+                q5: document.querySelector('input[name="q5"]:checked').value,
+                q6: document.querySelector('input[name="q6"]:checked').value,
+                q7: document.querySelector('input[name="q7"]:checked').value,
+                q8: document.querySelector('input[name="q8"]:checked').value,
+                q9: document.querySelector('input[name="q9"]:checked').value,
+                q10: document.querySelector('input[name="q10"]:checked').value,
+            };
+
+            // Calcular resultado
+            const contador = { a: 0, b: 0, c: 0 };
+
+            for (const respuesta in respuestas) {
+                contador[respuestas[respuesta]]++;
+            }
+
+            // Determinar el área principal
+            let areaRecomendada = '';
+            if (contador.a > contador.b && contador.a > contador.c) {
+                areaRecomendada = 'Ciencias Físico-Matemáticas y de las Ingenierías';
+            } else if (contador.b > contador.a && contador.b > contador.c) {
+                areaRecomendada = 'Ciencias Sociales y Humanidades';
+            } else {
+                areaRecomendada = 'Artes y Humanidades';
+            }
+
+            // Mostrar resultado en una ventana emergente (alert)
+            alert(`Basado en tus respuestas, tu área recomendada es: ${areaRecomendada}`);
+
+        }
+    </script>
+
+</body>
+
+</html>
